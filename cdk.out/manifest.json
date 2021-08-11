@@ -1,0 +1,688 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "MyPipelineDemoStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MyPipelineDemoStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MyPipelineDemoStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://965055704747/us-east-1",
+      "properties": {
+        "templateFile": "MyPipelineDemoStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::965055704747:role/cdk-hnb659fds-deploy-role-965055704747-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::965055704747:role/cdk-hnb659fds-cfn-exec-role-965055704747-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-965055704747-us-east-1/fa37dcfcdadf1489535c73c4a4bc30d4eff82d36cbfac1fabc528be8a21f28b5.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MyPipelineDemoStack.assets"
+        ]
+      },
+      "dependencies": [
+        "MyPipelineDemoStack.assets"
+      ],
+      "metadata": {
+        "/MyPipelineDemoStack/Pipeline/Pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKeyF5BF0670",
+            "trace": [
+              "new Key (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-kms/lib/key.ts:401:22)",
+              "new Pipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:233:25)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:105:24)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKeyAlias94A07392",
+            "trace": [
+              "new Alias (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-kms/lib/alias.ts:143:22)",
+              "new Pipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:239:9)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:105:24)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketAEA9A052",
+            "trace": [
+              "new Bucket (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:713:22)",
+              "new Pipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:246:21)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:105:24)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleB27FAA37",
+            "trace": [
+              "new Role (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Pipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:257:31)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:105:24)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB",
+            "trace": [
+              "new Policy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "Function.addToPrincipal (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
+              "Function.addToPrincipalOrResource (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/grant.ts:48:26)",
+              "Bucket.grant (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:383:27)",
+              "Bucket.grantReadWrite (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:313:17)",
+              "new Pipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:273:25)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:105:24)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipeline9850B417",
+            "trace": [
+              "new Pipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:261:26)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:105:24)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCodePipelineActionRole4E7A6C97",
+            "trace": [
+              "new Role (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "Pipeline.getRoleForAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:522:20)",
+              "Pipeline._attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:356:29)",
+              "Stage.attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "new Stage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:40:12)",
+              "Pipeline.addStage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:303:19)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:135:22)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCodePipelineActionRoleDefaultPolicy92C90290",
+            "trace": [
+              "new Policy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "Role.addToPolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:244:17)",
+              "CodeBuildAction.bound (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:90:18)",
+              "CodeBuildAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/action.ts:234:17)",
+              "SimpleSynthAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/synths/simple-synth-action.ts:280:25)",
+              "RichAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:37)",
+              "Stage.attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "new Stage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:40:12)",
+              "Pipeline.addStage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:303:19)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:135:22)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A",
+            "trace": [
+              "new Role (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Project (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:639:31)",
+              "new PipelineProject (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "SimpleSynthAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/synths/simple-synth-action.ts:244:21)",
+              "RichAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:37)",
+              "Stage.attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "new Stage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:40:12)",
+              "Pipeline.addStage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:303:19)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:135:22)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C",
+            "trace": [
+              "new Policy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "PipelineProject.addToRolePolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:168:17)",
+              "new Project (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:738:10)",
+              "new PipelineProject (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "SimpleSynthAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/synths/simple-synth-action.ts:244:21)",
+              "RichAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:37)",
+              "Stage.attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "new Stage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:40:12)",
+              "Pipeline.addStage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:303:19)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:135:22)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
+            "trace": [
+              "new Project (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:22)",
+              "new PipelineProject (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "SimpleSynthAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/synths/simple-synth-action.ts:244:21)",
+              "RichAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:37)",
+              "Stage.attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "new Stage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:40:12)",
+              "Pipeline.addStage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:303:19)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:135:22)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleD6D4E5CF",
+            "trace": [
+              "new Role (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "Pipeline.getRoleForAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:522:20)",
+              "Pipeline._attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:356:29)",
+              "Stage.attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "new Stage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:40:12)",
+              "Pipeline.addStage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:303:19)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:142:22)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleDefaultPolicyE626265B",
+            "trace": [
+              "new Policy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "Role.addToPolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:244:17)",
+              "CodeBuildAction.bound (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:90:18)",
+              "CodeBuildAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/action.ts:234:17)",
+              "UpdatePipelineAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/actions/update-pipeline-action.ts:112:24)",
+              "RichAction.bind (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:37)",
+              "Stage.attachActionToPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "new Stage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:40:12)",
+              "Pipeline.addStage (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:303:19)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:142:22)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8",
+            "trace": [
+              "new Role (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Project (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:639:31)",
+              "new PipelineProject (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "new UpdatePipelineAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/actions/update-pipeline-action.ts:69:33)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:144:19)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E",
+            "trace": [
+              "new Policy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "PipelineProject.addToRolePolicy (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:168:17)",
+              "new Project (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:738:10)",
+              "new PipelineProject (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "new UpdatePipelineAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/actions/update-pipeline-action.ts:69:33)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:144:19)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationDAA41400",
+            "trace": [
+              "new Project (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:22)",
+              "new PipelineProject (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "new UpdatePipelineAction (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/actions/update-pipeline-action.ts:69:33)",
+              "new CdkPipeline (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/pipelines/lib/legacy/pipeline.ts:144:19)",
+              "new MyPipelineDemoStack (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/lib/cdkpipelines-demo-pipeline-stack.ts:13:22)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "construct (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5)",
+              "visit (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:11:5)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:451:17)",
+              "DefaultStackSynthesizer.synthesize (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:277:7)",
+              "construct (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29)",
+              "visit (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "App.synth (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:11:5)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/MyPipelineDemoStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:461:3)",
+              "DefaultStackSynthesizer.synthesize (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:277:7)",
+              "construct (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29)",
+              "visit (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "App.synth (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/bin/cdkpipelines-demo.ts:11:5)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Module.m._compile (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "main (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdkprojects/cdkpipelines-demo/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:778:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)",
+              "Module.load (internal/modules/cjs/loader.js:653:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:593:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:585:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:831:12)",
+              "findNodeScript.then.existing (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ]
+      },
+      "displayName": "MyPipelineDemoStack"
+    }
+  }
+}
