@@ -21,7 +21,7 @@ export class MyPipelineDemoStack extends Stack {
         trigger: codepipeline_actions.GitHubTrigger.POLL,
         // Replace these with your actual GitHub project info
         owner: 'DSaenz10',
-        repo: 'cdkpipelinerepodemo ',
+        repo: 'cdkpipelinerepodemo',
         branch: 'main',
       }),
 
