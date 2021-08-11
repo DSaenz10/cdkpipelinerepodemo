@@ -22,7 +22,7 @@ export class MyPipelineDemoStack extends Stack {
         // Replace these with your actual GitHub project info
         owner: 'DSaenz10',
         repo: 'cdkpipelinerepodemo',
-        branch: 'main',
+        branch: 'main'
       }),
 
       synthAction: SimpleSynthAction.standardNpmSynth({
