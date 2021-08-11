@@ -1,7 +1,10 @@
 import * as codepipeline from '@aws-cdk/aws-codepipeline';
 import * as codepipeline_actions from '@aws-cdk/aws-codepipeline-actions';
+import { ManualApprovalAction } from '@aws-cdk/aws-codepipeline-actions';
 import { Construct, SecretValue, Stack, StackProps, Stage, StageProps } from '@aws-cdk/core';
 import { CdkPipeline, CodePipeline, CodePipelineSource, ShellStep, SimpleSynthAction } from "@aws-cdk/pipelines";
+import { CdkpipelinesDemoStage } from './cdkpipelines-demo-stage';
+import { CdkpipelinesDemoStage2 } from './cdkpipelines-demo-stage2';
 
 export class MyPipelineDemoStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -34,5 +37,15 @@ export class MyPipelineDemoStack extends Stack {
         buildCommand: 'npm run build',
       }),
     });
+    
+    const testingStage = pipeline.addApplicationStage(new CdkpipelinesDemoStage(this, 'Testing', {
+      env: { account: '965055704747', region: 'us-east-1' }
+    }));
+    
+    testingStage.addActions(new ManualApprovalAction({
+        actionName: 'ManualApproval',
+        runOrder: testingStage.nextSequentialRunOrder(),
+    }));
+    
   }
 }

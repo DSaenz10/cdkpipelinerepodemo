@@ -211,7 +211,7 @@
                 },
                 "Configuration": {
                   "Owner": "DSaenz10",
-                  "Repo": "cdkpipelinerepodemo ",
+                  "Repo": "cdkpipelinerepodemo",
                   "Branch": "main",
                   "OAuthToken": "{{resolve:secretsmanager:github-token:SecretString:::}}",
                   "PollForSourceChanges": true
