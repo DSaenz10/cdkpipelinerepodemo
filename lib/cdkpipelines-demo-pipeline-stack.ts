@@ -42,9 +42,8 @@ export class MyPipelineDemoStack extends Stack {
       env: { account: '965055704747', region: 'us-east-1' }
     }));
     
-    testingStage.addActions(new ManualApprovalAction({
-        actionName: 'ManualApproval',
-        runOrder: testingStage.nextSequentialRunOrder(),
+    const testingStage2 = pipeline.addApplicationStage(new CdkpipelinesDemoStage2(this, 'Testing-in-another-account', {
+      env: { account: '404277375051', region: 'us-east-1' }
     }));
     
   }
